@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Controle de Nacionalidade</h1>
+    Digite de qual Pais você é: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="verifica" onclick="verifica()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verifica() {
+            var pais = window.document.querySelector('input#txtp')
+            var res = window.document.querySelector('div#res')
+            var nac = String(pais.value).toUpperCase()
+           if (nac == 'BRASIL') {
+            res.innerHTML += `Seu País de origem é <strong>${nac}</strong> Você e Brasileiro`
+           } else {
+            res.innerHTML += `Seu País de origem é <strong>${nac}</strong> você é Gringo`       
+           }
+       }
+
+    </script>
+</body>
+</html>
